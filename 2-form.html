@@ -5,10 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <script type="module" crossorigin src="/goit-advancedjs-hw-01/assets/styles-CGi93p-a.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-01/assets/styles-DHiKr0lR.css">
+    <script type="module" crossorigin src="/goit-advancedjs-hw-01/2-form.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-01/assets/2-form-CnGBi3DM.css">
   </head>
   <body>
-    <h1 class="main-title">Form</h1>
+    <!-- <h1 class="main-title">Form</h1> -->
+
+    <p><a href="./index.html">Go back</a></p>
+
+    <div class="container">
+      <form class="feedback-form" autocomplete="off">
+        <label class="text-label">
+          Email
+          <input
+            type="email"
+            name="email"
+            class="feedback-form-input"
+            autofocus
+          />
+        </label>
+        <label class="text-label">
+          Message
+          <textarea
+            name="message"
+            rows="8"
+            class="feedback-form-message"
+          ></textarea>
+        </label>
+        <button class="feedback-form-submit" type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
