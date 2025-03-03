@@ -113,7 +113,7 @@ console.log(element);
 //   // process modal window
 // });
 
-new SimpleLightbox('.gallery-link', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });

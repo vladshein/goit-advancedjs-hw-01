@@ -2,7 +2,10 @@ const refs = {
   feedbackForm: document.querySelector('.feedback-form'),
 };
 
-let formData = {};
+const formData = {
+  email: '',
+  message: '',
+};
 
 const fillFormFields = feedbackForm => {
   try {
@@ -40,16 +43,21 @@ const onFieldChange = ({ target: formField }) => {
 const onFeedbackFormSubmit = event => {
   event.preventDefault();
 
-  const email = document.querySelector('.feedback-form-input').value;
-  const message = document.querySelector('.feedback-form-message').value;
+  //   const email = document.querySelector('.feedback-form-input').value;
+  //   const message = document.querySelector('.feedback-form-message').value;
 
-  if (!email || !message) {
+  if (!formData.email || !formData.message) {
     // event.preventDefault(); // Prevent form submission
-    alert('Both fields need to be filled');
+    alert('Будь ласка, заповніть усі поля');
     return;
   }
+  console.log(formData.email);
+  console.log(formData.message);
+
   event.target.reset();
   localStorage.removeItem('feedback-form-state');
+  formData.email = '';
+  formData.message = '';
 };
 
 refs.feedbackForm.addEventListener('input', onFieldChange);
