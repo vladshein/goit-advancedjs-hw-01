@@ -3,6 +3,7 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   width: 360px;
   padding: 24px;
   margin: 0 auto;
@@ -17,14 +18,14 @@
   letter-spacing: 0.64px;
 }
 
-.text-label {
+label {
   display: flex;
   flex-direction: column;
   /* margin-bottom: 8px; */
   gap: 8px;
 }
 
-.feedback-form-input {
+/* .feedback-form-input {
   height: 40px;
   padding-left: 15px;
   border: 1px solid #303030;
@@ -37,7 +38,7 @@
   border: 1px solid #303030;
   margin-bottom: 20px;
   resize: none;
-}
+} */
 
 .feedback-form-submit {
   display: flex;

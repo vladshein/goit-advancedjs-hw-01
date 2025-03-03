@@ -17,7 +17,8 @@ const fillFormFields = feedbackForm => {
       return;
     }
 
-    formData = formDataFromLS;
+    if (formDataFromLS.email) formData.email = formDataFromLS.email;
+    if (formDataFromLS.message) formData.message = formDataFromLS.message;
 
     const formDataKeys = Object.keys(formDataFromLS);
 
@@ -43,8 +44,8 @@ const onFieldChange = ({ target: formField }) => {
 const onFeedbackFormSubmit = event => {
   event.preventDefault();
 
-  //   const email = document.querySelector('.feedback-form-input').value;
-  //   const message = document.querySelector('.feedback-form-message').value;
+  //   const email = document.querySelector('input').value;
+  //   const message = document.querySelector('textarea').value;
 
   if (!formData.email || !formData.message) {
     // event.preventDefault(); // Prevent form submission
